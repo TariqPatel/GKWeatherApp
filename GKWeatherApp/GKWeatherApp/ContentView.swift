@@ -1,33 +1,40 @@
 import SwiftUI
 import CoreLocation
 
-class LocationDelegate: NSObject, CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Location request failed with error: \(error.localizedDescription)")
-    }
-}
-
 struct ContentView: View {
     @State private var locationManager = CLLocationManager()
     @State private var locationDelegate = LocationDelegate()
+    @State private var isButtonVisible = false
 
     var body: some View {
-        VStack {
-            Text("Your App Content Here")
-
-            Button("Get Location") {
+        NavigationView {
+            VStack {
+                Button(action: {
+                    requestLocation()
+                    isButtonVisible = true
+                }) {
+                    Text("Get Current Location")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                if isButtonVisible {
+                    Button(action: {
+                        requestLocation()
+                    }) {
+                        NavigationLink(destination: HomeView(homeViewModel: HomeViewModel(latitude: locationDelegate.getLatitude(), longitude: locationDelegate.getLongitude()))) {
+                            Text("Show Todays Weather")
+                        }
+                        .isDetailLink(false)
+                    }
+                }
+            }
+            .onAppear {
+                setupLocationManager()
                 requestLocation()
             }
-        }
-        .onAppear {
-            setupLocationManager()
-            requestLocation()
         }
     }
     

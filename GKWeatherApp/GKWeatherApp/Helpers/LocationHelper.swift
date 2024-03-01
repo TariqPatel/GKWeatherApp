@@ -8,15 +8,26 @@
 import Foundation
 import CoreLocation
 
-struct LocationHelper {
-    public static func getLocation(_ city: String) -> CLLocationCoordinate2D? {
-        var location: CLLocationCoordinate2D?
-        CLGeocoder().geocodeAddressString(city) { (placemarks, error) in
-            if let places = placemarks,
-               let place = places.first {
-                location = place.location?.coordinate ?? nil
-            }
+class LocationDelegate: NSObject, CLLocationManagerDelegate {
+    var latitude = 0.0
+    var longitude = 0.0
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            latitude = location.coordinate.latitude
+            longitude = location.coordinate.longitude
         }
-        return location
+    }
+    
+    func getLatitude() -> Double {
+       return latitude
+    }
+    
+    func getLongitude() -> Double {
+       return longitude
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Location request failed with error: \(error.localizedDescription)")
     }
 }

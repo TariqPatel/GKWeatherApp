@@ -12,7 +12,6 @@ struct HomeView: View {
     @StateObject var homeViewModel = HomeViewModel()
     
     var body: some View {
-        NavigationView {
         VStack(spacing: 20) {
             Text("Current Weather")
             List {
@@ -43,7 +42,6 @@ struct HomeView: View {
                 Text("Show Weather For The Week")
             }
             Spacer()
-        }
     }
 }
 }
