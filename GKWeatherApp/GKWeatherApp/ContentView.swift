@@ -6,7 +6,7 @@ struct ContentView: View {
     @State private var locationDelegate = LocationDelegate()
     @State private var isButtonVisible = false
     @State private var isLocationAvailable = false
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -20,24 +20,30 @@ struct ContentView: View {
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
+                .padding()
                 
                 if isButtonVisible && isLocationAvailable {
-                    Button(action: {
-                        requestLocation()
-                    }) {
-                        NavigationLink(destination: HomeView(homeViewModel: HomeViewModel(latitude: locationDelegate.getLatitude(), longitude: locationDelegate.getLongitude()))) {
-                            Text("Show Todays Weather")
-                        }
-                        .isDetailLink(false)
+                    NavigationLink(destination: HomeView(homeViewModel: HomeViewModel(latitude: locationDelegate.getLatitude(), longitude: locationDelegate.getLongitude()))) {
+                        Text("Show Today's Weather")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
                     }
+                    .padding()
                 }
             }
+            .background(Color(UIColor.systemBackground)) // Background color similar to iOS
+            .navigationBarTitle("Weather App")
+            .font(.headline) // Use a specific font if needed
             .onAppear {
                 setupLocationManager()
                 requestLocation()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // Use StackNavigationViewStyle for iOS 14 and later
     }
+
     
     private func setupLocationManager() {
         locationManager.delegate = locationDelegate
