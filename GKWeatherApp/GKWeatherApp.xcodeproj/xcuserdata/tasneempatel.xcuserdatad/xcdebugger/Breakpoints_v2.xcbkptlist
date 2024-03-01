@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B1E94ADC-D136-4FB4-8309-316F142F38D9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7682FBC-C857-4ED3-BC5F-9BC3830A73C0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GKWeatherApp/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3867B4B0-CACA-441C-AC2F-B4C3C9FFCAA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GKWeatherApp/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FD07CEF-A50D-4ABB-B0D5-4CF60A904136"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GKWeatherApp/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "requestLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3FD07CEF-A50D-4ABB-B0D5-4CF60A904136 - 1705160255073324"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GKWeatherApp.ContentView.requestLocation() -&gt; ()"
+                  moduleName = "GKWeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tasneempatel/Documents/GitHub/GKWeatherApp/GKWeatherApp/GKWeatherApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "537">
+               </Location>
+               <Location
+                  uuid = "3FD07CEF-A50D-4ABB-B0D5-4CF60A904136 - 170516025507337b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GKWeatherApp.ContentView.requestLocation() -&gt; ()"
+                  moduleName = "GKWeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tasneempatel/Documents/GitHub/GKWeatherApp/GKWeatherApp/GKWeatherApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "218">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA67F9F5-9D3E-4702-869F-95B1646963EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GKWeatherApp/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "requestLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA67F9F5-9D3E-4702-869F-95B1646963EB - 170516025507303d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GKWeatherApp.ContentView.requestLocation() -&gt; ()"
+                  moduleName = "GKWeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tasneempatel/Documents/GitHub/GKWeatherApp/GKWeatherApp/GKWeatherApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1038">
+               </Location>
+               <Location
+                  uuid = "EA67F9F5-9D3E-4702-869F-95B1646963EB - 170516025507303d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GKWeatherApp.ContentView.requestLocation() -&gt; ()"
+                  moduleName = "GKWeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tasneempatel/Documents/GitHub/GKWeatherApp/GKWeatherApp/GKWeatherApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "555">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
