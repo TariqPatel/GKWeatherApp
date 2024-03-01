@@ -5,6 +5,7 @@ struct ContentView: View {
     @State private var locationManager = CLLocationManager()
     @State private var locationDelegate = LocationDelegate()
     @State private var isButtonVisible = false
+    @State private var isLocationAvailable = false
 
     var body: some View {
         NavigationView {
@@ -20,7 +21,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 
-                if isButtonVisible {
+                if isButtonVisible && isLocationAvailable {
                     Button(action: {
                         requestLocation()
                     }) {
@@ -49,7 +50,7 @@ struct ContentView: View {
 
             switch authorizationStatus {
             case .authorizedWhenInUse, .authorizedAlways:
-                // Location services are already authorized, start updating location
+                isLocationAvailable = true
                 locationManager.startUpdatingLocation()
 
             case .notDetermined:
