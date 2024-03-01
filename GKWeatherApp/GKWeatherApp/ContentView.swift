@@ -34,7 +34,7 @@ struct ContentView: View {
                 }
             }
             .background(Color(UIColor.systemBackground)) // Background color similar to iOS
-            .navigationBarTitle("Weather App")
+            .navigationBarTitle("GK Weather App")
             .font(.headline) // Use a specific font if needed
             .onAppear {
                 setupLocationManager()
